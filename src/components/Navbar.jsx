@@ -22,7 +22,7 @@ const Navbar = () => {
           to="/"
           className={({ isActive }) =>
             isActive
-              ? `${linkStyle} bg-green-700 text-white`
+              ? `${linkStyle} bg-green-900 text-white`
               : `${linkStyle} text-gray-600 hover:bg-gray-100`
           }
         >
@@ -34,7 +34,7 @@ const Navbar = () => {
           to="/timeline"
           className={({ isActive }) =>
             isActive
-              ? `${linkStyle} bg-green-700 text-white`
+              ? `${linkStyle} bg-green-900 text-white`
               : `${linkStyle} text-gray-600 hover:bg-gray-100`
           }
         >
@@ -46,7 +46,7 @@ const Navbar = () => {
           to="/stats"
           className={({ isActive }) =>
             isActive
-              ? `${linkStyle} bg-green-700 text-white`
+              ? `${linkStyle} bg-green-900 text-white`
               : `${linkStyle} text-gray-600 hover:bg-gray-100`
           }
         >
