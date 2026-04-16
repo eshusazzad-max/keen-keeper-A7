@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "David Kim",
-    "picture": "https://randomuser.me/api/portraits/men/11.jpg",
+    "picture":  "https://i.pravatar.cc/100?img=12",
     "days_since_contact": 62,
     "status": "almost due",
     "tags": ["work"]
