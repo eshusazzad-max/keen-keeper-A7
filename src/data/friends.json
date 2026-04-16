@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "David Kim",
+    "picture": "https://randomuser.me/api/portraits/men/11.jpg",
+    "days_since_contact": 62,
+    "status": "almost due",
+    "tags": ["work"]
+  },
+  {
+    "id": 2,
+    "name": "Emma Wilson",
+    "picture": "https://randomuser.me/api/portraits/women/21.jpg",
+    "days_since_contact": 62,
+    "status": "overdue",
+    "tags": ["family"]
+  },
+  {
+    "id": 3,
+    "name": "Lisa Nakamura",
+    "picture": "https://randomuser.me/api/portraits/women/32.jpg",
+    "days_since_contact": 62,
+    "status": "overdue",
+    "tags": ["family"]
+  },
+  {
+    "id": 4,
+    "name": "James Wright",
+    "picture": "https://randomuser.me/api/portraits/men/45.jpg",
+    "days_since_contact": 62,
+    "status": "overdue",
+    "tags": ["hobby", "travel"]
+  },
+  {
+    "id": 5,
+    "name": "Sophia Brown",
+    "picture": "https://randomuser.me/api/portraits/women/55.jpg",
+    "days_since_contact": 62,
+    "status": "overdue",
+    "tags": ["family"]
+  },
+  {
+    "id": 6,
+    "name": "Olivia Martin",
+    "picture": "https://randomuser.me/api/portraits/women/65.jpg",
+    "days_since_contact": 62,
+    "status": "on-track",
+    "tags": ["family"]
+  },
+  {
+    "id": 7,
+    "name": "Noah Anderson",
+    "picture": "https://randomuser.me/api/portraits/men/75.jpg",
+    "days_since_contact": 62,
+    "status": "on-track",
+    "tags": ["work"]
+  },
+  {
+    "id": 8,
+    "name": "Liam Thomas",
+    "picture": "https://randomuser.me/api/portraits/men/85.jpg",
+    "days_since_contact": 62,
+    "status": "almost due",
+    "tags": [ "travel"]
+  },
+  {
+    "id": 9,
+    "name": "Ava Garcia",
+    "picture": "https://randomuser.me/api/portraits/women/95.jpg",
+    "days_since_contact": 62,
+    "status": "almost due",
+    "tags": ["work"]
+  },
+  {
+    "id": 10,
+    "name": "Mia Lopez",
+    "picture": "https://randomuser.me/api/portraits/women/12.jpg",
+    "days_since_contact": 62,
+    "status": "overdue",
+    "tags": ["family"]
+  },
+  {
+    "id": 11,
+    "name": "Ethan Clark",
+    "picture": "https://randomuser.me/api/portraits/men/22.jpg",
+    "days_since_contact": 62,
+    "status": "overdue",
+    "tags": ["work"]
+  },
+  {
+    "id": 12,
+    "name": "Lucas Walker",
+    "picture": "https://randomuser.me/api/portraits/men/33.jpg",
+    "days_since_contact": 62,
+    "status": "on-track",
+    "tags": ["hobby", "travel"]
+  }
+]
