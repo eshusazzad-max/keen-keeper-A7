@@ -31,8 +31,7 @@ const Timeline = ({ timeline }) => {
           {timeline.map((item) => (
             <div
               key={item.id}
-              className="bg-white p-4 rounded-xl border border-gray-200 flex items-center gap-4 hover:bg-gray-50 transition"
-            >
+              className="bg-white p-4 rounded-xl border border-gray-200 flex items-center gap-4 hover:bg-gray-50 transition">
 
               {/* ICON */}
               {item.type === "Call" && (

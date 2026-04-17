@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const FriendCard = ({ friend }) => {
 
-  // 🔥 status color logic
+  // status color logic
   const getStatusColor = () => {
     if (friend.status === "overdue")
       return "bg-red-500 text-white";

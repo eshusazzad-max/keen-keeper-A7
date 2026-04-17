@@ -104,7 +104,7 @@ const FriendDetails = ({ setTimeline }) => {
             </div>
 
             <div className="bg-white p-4 rounded shadow text-center">
-              <h2 className="text-green-900 text-xl font-bold">Feb 27, 2026</h2>
+              <h2 className="text-green-900 text-xl font-bold">  {new Date().toDateString()} </h2>
               <p className="text-gray-400 text-sm">Next Due</p>
             </div>
           </div>
@@ -127,7 +127,7 @@ const FriendDetails = ({ setTimeline }) => {
           <div className="bg-white p-4 rounded shadow">
             <h3 className="text-green-900 mb-3 font-semibold">Quick Check-In</h3>
 
-            {/* ✅ FIXED GRID */}
+            {/*FIXED GRID */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 
               <button onClick={() => addToTimeline("Call")}
