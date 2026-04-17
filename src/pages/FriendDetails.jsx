@@ -8,8 +8,21 @@ import deleteIcon from "../assets/delete.png";
 import callIcon from "../assets/call.png";
 import textIcon from "../assets/text.png";
 import videoIcon from "../assets/video.png";
+import meetIcon from "../assets/agreement.png";
 
-const FriendDetails = () => {
+const FriendDetails = ({ setTimeline }) => {
+  const addToTimeline = (type) => {
+  const newEntry = {
+    id: Date.now(),
+    type: type,
+    name: friend.name,
+    date: new Date().toDateString(),
+  };
+
+  setTimeline((prev) => [newEntry, ...prev]);
+
+  alert(type + " added!");
+ };
   const { id } = useParams();
 
   const friend = friends.find(f => f.id == id);
@@ -77,17 +90,17 @@ const FriendDetails = () => {
           {/* Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="bg-white p-4 rounded shadow text-center">
-              <h2 className="text-xl font-bold">{friend.days_since_contact}</h2>
+              <h2 className="text-green-900 text-xl font-bold">{friend.days_since_contact}</h2>
               <p className="text-gray-400 text-sm">Days Since Contact</p>
             </div>
 
             <div className="bg-white p-4 rounded shadow text-center">
-              <h2 className="text-xl font-bold">30</h2>
+              <h2 className="text-green-900 text-xl font-bold">30</h2>
               <p className="text-gray-400 text-sm">Goal (Days)</p>
             </div>
 
             <div className="bg-white p-4 rounded shadow text-center">
-              <h2 className="text-xl font-bold">Feb 27, 2026</h2>
+              <h2 className="text-green-900 text-xl font-bold">Feb 27, 2026</h2>
               <p className="text-gray-400 text-sm">Next Due</p>
             </div>
           </div>
@@ -95,32 +108,39 @@ const FriendDetails = () => {
           {/* Goal */}
           <div className="bg-white p-4 rounded shadow flex justify-between">
             <div>
-              <h3 className="font-semibold">Relationship Goal</h3>
+              <h3 className="text-green-900 font-semibold">Relationship Goal</h3>
               <p className="text-gray-500 text-sm">Connect every 30 days</p>
             </div>
 
-            <button className="text-sm bg-gray-100 px-3 py-1 rounded">Edit</button>
+            <button className="text-sm bg-gray-100 border px-3 py-1 rounded">Edit</button>
           </div>
 
           {/* Quick Check-In */}
           <div className="bg-white p-4 rounded shadow">
-            <h3 className="mb-3 font-semibold">Quick Check-In</h3>
+            <h3 className="text-green-900 mb-3 font-semibold">Quick Check-In</h3>
 
             <div className="grid grid-cols-3 gap-4">
 
-              <button className="border p-4 rounded flex flex-col items-center gap-2">
+              <button onClick={() => addToTimeline("Call")}
+               className=" bg-gray-100 border p-4 rounded flex flex-col items-center gap-2">
                 <img src={callIcon} className="w-6 h-6" />
                 Call
               </button>
 
-              <button className="border p-4 rounded flex flex-col items-center gap-2">
+              <button onClick={() => addToTimeline("Text")}className="bg-gray-100 border p-4 rounded flex flex-col items-center gap-2">
                 <img src={textIcon} className="w-6 h-6" />
                 Text
               </button>
 
-              <button className="border p-4 rounded flex flex-col items-center gap-2">
+              <button onClick={() => addToTimeline("Video")} className="bg-gray-100 border p-4 rounded flex flex-col items-center gap-2">
                 <img src={videoIcon} className="w-6 h-6" />
                 Video
+              </button>
+
+              <button  onClick={() => addToTimeline("Meeting")}
+               className="bg-gray-100 border p-4 rounded-lg flex flex-col items-center gap-2">
+                <img src={meetIcon} className="w-6 h-6 opacity-70" />
+                 Meeting
               </button>
 
             </div>

@@ -3,15 +3,19 @@ import Home from "./pages/Home";
 import Navbar from "./components/navbar";
 import Footer from "./components/Footer";
 import FriendDetails from "./pages/FriendDetails";
+import Timeline from "./pages/Timeline";
+import { useState } from "react";
 
 
 function App() {
+  const [timeline, setTimeline] = useState([]);
   return (
     <BrowserRouter>
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/friend/:id" element={<FriendDetails/>} />
+        <Route path="/friend/:id" element={<FriendDetails  setTimeline={setTimeline} />} />
+        <Route path="/timeline" element={<Timeline timeline={timeline} />} />
       </Routes>
       <Footer/>
     </BrowserRouter>
