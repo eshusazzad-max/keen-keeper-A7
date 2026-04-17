@@ -1,6 +1,7 @@
 import facebook from "../assets/facebook.png";
 import instagram from "../assets/instagram.png";
 import twitter from "../assets/twitter.png";
+import logo from "../assets/logo-xl.png";
 
 const Footer = () => {
   return (
@@ -8,8 +9,7 @@ const Footer = () => {
 
       {/* Top */}
       <div className="text-center py-16 px-4">
-        <h1 className="text-4xl font-bold mb-4">KeenKeeper</h1>
-
+        <img src={logo} className="h-12 mx-auto object-contain block" />
         <p className="text-gray-300 max-w-xl mx-auto mb-6">
           Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.
         </p>

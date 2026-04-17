@@ -1,7 +1,21 @@
-
+import { useState, useEffect } from "react";
 import FriendCard from "../components/FriendCard";
 import friends from "../data/friends.json";
 const Home = () => {
+  const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+      setTimeout(() => {
+      setLoading(false);
+      }, 300);
+    }, []);
+    if (loading) {
+    return (
+      <h1 className="text-center mt-20 text-xl">
+        Loading...
+      </h1>
+     );
+   }
   return (
     <div>
 

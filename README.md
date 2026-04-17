@@ -1,16 +1,48 @@
-# React + Vite
+# KeenKeeper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+KeenKeeper is a simple React app to track and manage your friends and interactions.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* View all friends
+* Add interactions (Call, Text, Video, Meeting)
+* Timeline of activities
+* Stats page with chart
+* Toast notification
+* Loading animation
+* 404 Page for invalid routes
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies
+
+* React
+* Tailwind CSS
+* React Router
+* Recharts
+* React Toastify
+
+
+
+##  Pages
+
+* Home
+* Friend Details
+* Timeline
+* Stats
+
+
+
+##  How to Run
+
+```bash
+npm install
+npm run dev
+```
+
+
+
+## Author
+
+SINTHIA AKTER ESHA
