@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
 import friends from "../data/friends.json";
+import { toast } from "react-toastify";
 
-// ✅ ICON IMPORT
+// ICON IMPORT
 import alarm from "../assets/alarm.png";
 import box from "../assets/box.png";
 import deleteIcon from "../assets/delete.png";
@@ -11,26 +12,29 @@ import videoIcon from "../assets/video.png";
 import meetIcon from "../assets/agreement.png";
 
 const FriendDetails = ({ setTimeline }) => {
-  const addToTimeline = (type) => {
-  const newEntry = {
-    id: Date.now(),
-    type: type,
-    name: friend.name,
-    date: new Date().toDateString(),
-  };
 
-  setTimeline((prev) => [newEntry, ...prev]);
-
-  alert(type + " added!");
- };
+  // 👉 FIRST id + friend define korte hobe
   const { id } = useParams();
-
   const friend = friends.find(f => f.id == id);
 
-  // ✅ SAFETY (white screen fix)
+  // 👉 safety (white screen fix)
   if (!friend) {
     return <h1 className="text-red-500 text-2xl">Friend not found</h1>;
   }
+
+  // 👉 THEN function likhba (IMPORTANT)
+  const addToTimeline = (type) => {
+    const newEntry = {
+      id: Date.now(),
+      type: type,
+      name: friend.name,
+      date: new Date().toDateString(),
+    };
+
+    setTimeline((prev) => [newEntry, ...prev]);
+
+    toast.success(type + " added successfully!");
+  };
 
   return (
     <div className="bg-gray-100 min-h-screen py-10">
@@ -109,38 +113,45 @@ const FriendDetails = ({ setTimeline }) => {
           <div className="bg-white p-4 rounded shadow flex justify-between">
             <div>
               <h3 className="text-green-900 font-semibold">Relationship Goal</h3>
-              <p className="text-gray-500 text-sm">Connect every 30 days</p>
+              <p className="text-gray-500 text-sm">
+                Connect every <span className="font-semibold">30 days</span>
+              </p>
             </div>
 
-            <button className="text-sm bg-gray-100 border px-3 py-1 rounded">Edit</button>
+            <button className="text-sm bg-gray-100 border px-3 py-1 rounded">
+              Edit
+            </button>
           </div>
 
           {/* Quick Check-In */}
           <div className="bg-white p-4 rounded shadow">
             <h3 className="text-green-900 mb-3 font-semibold">Quick Check-In</h3>
 
-            <div className="grid grid-cols-3 gap-4">
+            {/* ✅ FIXED GRID */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 
               <button onClick={() => addToTimeline("Call")}
-               className=" bg-gray-100 border p-4 rounded flex flex-col items-center gap-2">
+                className="bg-gray-100 border p-4 rounded flex flex-col items-center gap-2">
                 <img src={callIcon} className="w-6 h-6" />
                 Call
               </button>
 
-              <button onClick={() => addToTimeline("Text")}className="bg-gray-100 border p-4 rounded flex flex-col items-center gap-2">
+              <button onClick={() => addToTimeline("Text")}
+                className="bg-gray-100 border p-4 rounded flex flex-col items-center gap-2">
                 <img src={textIcon} className="w-6 h-6" />
                 Text
               </button>
 
-              <button onClick={() => addToTimeline("Video")} className="bg-gray-100 border p-4 rounded flex flex-col items-center gap-2">
+              <button onClick={() => addToTimeline("Video")}
+                className="bg-gray-100 border p-4 rounded flex flex-col items-center gap-2">
                 <img src={videoIcon} className="w-6 h-6" />
                 Video
               </button>
 
-              <button  onClick={() => addToTimeline("Meeting")}
-               className="bg-gray-100 border p-4 rounded-lg flex flex-col items-center gap-2">
-                <img src={meetIcon} className="w-6 h-6 opacity-70" />
-                 Meeting
+              <button onClick={() => addToTimeline("Meeting")}
+                className="bg-gray-100 border p-4 rounded flex flex-col items-center gap-2">
+                <img src={meetIcon} className="w-6 h-6" />
+                Meeting
               </button>
 
             </div>

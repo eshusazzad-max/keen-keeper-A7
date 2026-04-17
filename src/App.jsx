@@ -5,6 +5,8 @@ import Footer from "./components/Footer";
 import FriendDetails from "./pages/FriendDetails";
 import Timeline from "./pages/Timeline";
 import { useState } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 function App() {
@@ -12,6 +14,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar/>
+      <ToastContainer/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/friend/:id" element={<FriendDetails  setTimeline={setTimeline} />} />
